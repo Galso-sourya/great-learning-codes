@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+ var sholey={
+    "name":'Sholay',
+    "cast":[
+'Amitabh','Hema','Dharmendra','Jaya'
+    ],
+     boxOfficeStats:{
+        countries:10,
+        collection:1230000
+     }
+     //"" is necessary if the key name contains special characters like space. key can also contain  function
+ };
+ sholey.addToCast=function(newMember){
+    this.cast[this.cast.length]=newMember;
+ };
+ sholey.addToCast('Sanjay');
+ console.log(sholey);   
+</script>
+    </body>
+
+</html>

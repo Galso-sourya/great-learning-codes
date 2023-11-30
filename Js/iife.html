@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+    //we should not declare global variable much.so we are wrapping the actual code in brackets
+    (function(){
+        var x=100;
+        const sum=function(x,y,cb){
+            var result=x+y;
+            cb(result);
+        };
+        sum(10,20,function(result){
+            console.log(result);
+        });
+    })();//by the last brackets, we are calling the function
+</script>
+    </body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+  var numbers=[10,20,5];
+  console.log(Math.min.apply(null,numbers));
+console.log(Math.ceil(3.5));//for rounding off  
+console.log(Math.pow(3,4));//3 to the power 4
+var wrappedNumber=new Number(5.5678);
+console.log(wrappedNumber.toFixed(2));//round up upto 2 decimal
+console.log(3.5678.toFixed(3));
+//if we can not evaluate something, it will print NaN
+var x=1/'hello';
+console.log(x);
+console.log(NaN);
+console.log(Number.NaN);
+console.log(NaN===NaN);
+//how to check the truth as previous expression always output false
+console.log(Number.isNaN(1/'hello'));
+console.log(isNaN(1/'hello'));
+</script>
+    </body>
+
+</html>

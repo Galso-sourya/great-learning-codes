@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+ function foo(x,y,z){
+    console.log(x,y,z);
+    console.log('foo was called');
+    console.log(arguments);
+    console.log(arguments[0],arguments[1],arguments[2],arguments[3]);
+    console.log(arguments.length);
+ }  
+ foo('a','b','c','d');//the function can accept 3 arguments but we have given 4. what will happen to the extra one? it will be stored in arguments. 
+</script>
+    </body>
+
+</html>

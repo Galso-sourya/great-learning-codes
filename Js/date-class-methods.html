@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+  var today=new Date();
+  console.log(today);
+  //month starts with 0, means december is the 11th month!!!!!!
+  //create different date
+  //the format is year,month and date,hour,minute,second,milisecond. sunday represents 0th day!!!!
+  var newDate=new Date(2000,0,1);
+  console.log(newDate);
+  //add one day to current date
+  today.setDate(today.getDate()+1);
+  console.log(today);
+//setters
+today.setDate(9);
+console.log(today);
+today.setFullYear(2018);
+console.log(today);
+//to get only the time portion
+console.log(today.toTimeString());
+</script>
+    </body>
+
+</html>

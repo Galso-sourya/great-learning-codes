@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+  //we can pass one function to other function as argument
+  const sum=function(x,y,cb){
+    var result=x+y;
+    cb(result);
+  };
+  function logResult(result){
+    console.log(result);
+  } 
+  sum(10,20,logResult);
+</script>
+    </body>
+
+</html>
