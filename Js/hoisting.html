@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+    //two kind of hoisting. function and variable hoisting
+//variable hoisting
+console.log(x);//we can access the variable before declaring it. 
+var x;
+console.log(x);
+console.log(y); 
+var y=1;
+console.log(y);
+    //function hoisting
+foo();//this will work even we write before declaring the function
+function foo(){
+    console.log('foo called');
+}
+/*
+bar();//this will not work as it is a kind of variable
+var bar=function(){
+    console.log('bar called');
+}
+*/
+</script>
+    </body>
+
+</html>
