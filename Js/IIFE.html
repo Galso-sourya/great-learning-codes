@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+//print hello world using IIFE
+(function(x,y){
+    console.log(x,y);
+})("hello","world");//hello is passed as x and world as y
+//iife within a function
+function myFunc(){
+    console.log("welcome to");
+    (function(){
+console.log("great learning");
+    })();
+    console.log("how are you");
+}
+myFunc();
+//magic and favourite number generator
+(function(){
+function MagicNumber(){
+    return Math.random()*100;
+}
+console.log("this is magic number:"+MagicNumber());
+var favoriteNumber=5;
+console.log("twice of favourite number is:"+favoriteNumber*2);
+})();
+</script>
+    </body>
+
+</html>
