@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+function Vowels_count(str){
+    const String=str.toLowerCase();
+    let count=0;
+    for(var i=0;i<str.length;i++){
+        if(
+            str[i]=="a" ||
+            str[i]=="e" ||
+            str[i]=="i" ||
+            str[i]=="o" ||
+            str[i]=="u" 
+        )
+        count++;
+    }
+    return count;
+}
+var no_of_vowels=Vowels_count("Hello Learners");
+if(no_of_vowels==0) console.log("no vowels");
+else console.log("no of vowels are:",no_of_vowels);
+</script>
+    </body>
+
+</html>
