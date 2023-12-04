@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+function foo(callback){
+    var x=10,y=20;
+    var z=x+y;
+    callback();
+    function retFn(){
+        console.log('retFn called');
+    }
+    return retFn;
+}
+function bar(){
+    console.log('bar called');
+}
+var resultFn=foo(bar);//another function is being passed as argument to the function foo. return value here is a function!!!!!!!
+resultFn();//we are just calling the result value here
+</script>
+    </body>
+
+</html>
