@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+var obj={
+    x:1//x is a own property of obj
+};
+console.log(Object.getPrototypeOf(obj));//this is the default empty prototype.it list all the methods
+console.log(obj.__proto__ );
+//we can set an object as prototype for an another object
+var proto={
+    y:2//y is the inherited property of obj from the prototype
+};
+Object.setPrototypeOf(obj,proto);
+console.log(obj);
+console.log(obj.y);
+var obj2={
+    z:3
+};
+Object.setPrototypeOf(obj2,proto);
+console.log(obj2.z);
+console.log(obj.z);
+proto.y=100;
+console.log(obj);//obj and obj2 both share a common prototype called proto. if any change happens, it will reflect in both the cases. in both of the objects
+</script>
+    </body>
+
+</html>
