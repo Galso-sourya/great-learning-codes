@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+//function can have different context based on different situations. whenever a function is declared, a call context is being assigned.
+function foo(){
+console.log(this);//this is called call context of function
+}
+foo();//if we run it in browser, the result will be different than if we run it in node.js. in browser, it will create a window object
+var john={
+    name:'john',
+    getName:function(){
+        console.log(this);//it is the context of object, not the function
+        return this.name;
+    }
+};
+console.log(john.getName());
+var getName=john.getName;
+getName();
+console.log(getName===john.getName);//getName is the global reference to the function
+</script>
+    </body>
+
+</html>
