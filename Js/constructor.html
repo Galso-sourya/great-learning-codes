@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+/*defining many objects with same structure is very tedious. we can use constructor. like beloow
+john={
+name:'john',
+age:32,
+celebrateBirthday:function(){
+    this.age++;
+}
+}
+mary={
+name:'mary',
+age:42,
+celebrateBirthday:function(){
+    this.age++;
+}
+}
+shortcut is here
+
+function Person(name,age){
+console.log(this);
+//return this;
+}*/
+/*function Person(name,age){
+//the object is no more empty
+//this a complete constructor
+this.name=name;
+this.age=age;
+this.celebrateBirthday=function(){//this is a local function. we can declare it in prototype portion
+    this.age++;
+};
+}*/
+function Person(name,age){
+this.name=name;
+this.age=age;
+}
+Person.prototype.celebrateBirthday=function(){
+    this.age++;
+};
+//console.log(new Person());it will return a new object which is empty
+var john=new Person('John',32);
+john.celebrateBirthday();
+console.log(john);
+var mary=new Person('mary',32);
+mary.celebrateBirthday();//due to local function, 2 different functions is created though they have same property. if 100 objects, 100 functions!!!!waste of resource
+//how to solve the problem. we can use prototype so that they will share the same function. how?
+console.log(mary);
+//one function can have property. one in build property is prototype. 
+console.log(john.__proto__===Person.prototype);
+console.log(mary.__proto__===Person.prototype);
+</script>
+    </body>
+
+</html>
