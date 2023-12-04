@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+function greet(message,name){
+    console.log(message+' '+name);
+}
+//how to prove that the function is an object?
+console.log(greet instanceof Object);
+greet.x=100;//it is a property of the function greet
+console.log(greet.x);//there will not be any error as greet is a object too apart from function
+greet.foo=function(){
+    console.log('greet.foo is called');
+};
+greet.foo();
+//call
+//greet.call();//call calls the calling function!so we can't we directly call the function. what is the use of call? it has advantage. it can change the context.
+greet.call('hello');//here context is changed to hello
+greet.call('hello','good night','mary');//call and apply has same function but apply can take array as an argument
+//apply
+var args=['good morning','sourya'];
+greet.apply('hello',args);
+greet.apply(null,args);
+//bind
+var greetBound=greet.bind('world');//world is the context here
+greetBound('hello','ram');//it will return a function same as greet.in this line, we are actually passing the 2 arguments.here the function name is greetBound only.
+var greetHola=greet.bind(null,'hola');
+greetHola('david');
+</script>
+    </body>
+
+</html>
