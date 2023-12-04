@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+
+    <body>
+<script>
+    var days=[
+{day:'sunday',hours:2},
+{day:'monday',hours:3},
+{day:'saturday',hours:6}
+    ];
+days.forEach(function(item){
+console.log(item);
+});
+var resultDays=days.filter(function(item){
+    //return true;
+    //return false;//it will return an empty array
+return item.hours<=5;
+});
+console.log(resultDays);
+//if we need corresponding values, we use map function
+var numbers=[1,2,3,4];
+var resultArray=numbers.map(function(item){
+    return item*item;
+});
+console.log(resultArray);
+</script>
+    </body>
+
+</html>
