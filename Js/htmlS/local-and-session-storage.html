@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <input type="text" id="favorite-color"/> 
+ city:<input type="text" id="favorite-city"/>  
+</body>
+<script>
+    let favoriteColor,favoriteCity;
+    document.querySelector('#favorite-color').addEventListener('input',function(){
+//you can store only strings in local storage
+favoriteColor=this.value
+localStorage.setItem('favorite-color',favoriteColor);//here also key-value pair concept
+document.body.style.backgroundColor=favoriteColor;
+//how to store in an object
+//localStorage.setItem('favorites',JSON.stringify({color:favoriteColor,city:favoriteCity}));
+    });
+    //local storage will be permanently stored even if the browser is closed
+    document.querySelector('#favorite-city').addEventListener('input',function(){
+        favoriteCity=this.value       
+localStorage.setItem('favorite-city',favoriteCity)
+//localStorage.setItem('favorites',JSON.stringify({color:favoriteColor,city:favoriteCity}));
+    });
+    //in case of session storage, instead of writing localStorage write sessionStorage
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./index.js"></script><!--if you are importing, you can remove this line-->
+    <script src="./store.js"></script>
+    <script>
+     //import {sum,diff} from './index.js'; 
+     //import {product} from './store.js'; 
+     //what if we want to use both the products. here we have to rename it like this-
+     // import {sum,diff,product as multiply} from './index.js';
+     //whatever is outside is the default export. so we can give any name.
+     // import Cmplx,{sum,diff,product as multiply} from './index.js';
+        console.log(sum(10,20));
+        console.log(diff(10,20));
+        console.log(product(10,20));
+        //console.log(product('Soap',20));
+        //console.log(multiply(10,20));
+        //const cmplx=new Cmplx(10,20);
+        //console.log(cmplx.toString());
+    </script>
+    <!--<script src="./index.js" type="module"></script>
+    <script src="./store.js" type="module"></script>
+    <script type="module">
+        console.log(sum(10,20));
+        console.log(diff(10,20));
+        console.log(product(10,20));
+    </script>
+to download http server, type npm i -g http-server in terminal
+to start it, type http-server
+go to url available and open the file. see the console output. there will be error. how to solve?
+add export before the declaration
+also mention import
+-->
+</body>
+</html>

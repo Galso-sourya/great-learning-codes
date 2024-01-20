@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //we can store information of one page and use it for the other page
+        const favoriteColor=localStorage.getItem('favorite-color');
+        document.body.style.backgroundColor=favoriteColor;
+    </script>
+</body>
+</html>
