@@ -11,6 +11,8 @@
 
 	<bean id="hindiTeacher"
 	class="com.greatlearning.serviceImpl.HindiTeacher"></bean>
+	<bean id="mathsTeacher"
+	class="com.greatlearning.serviceImpl.MathsTeacher"></bean>
 
 </beans>
 
