@@ -6,10 +6,10 @@ import com.greatlearning.service.Teacher;
 public class HindiTeacher implements Teacher {
 //defining a private field for dependency
 	ExamTip examTip;
-	public HindiTeacher() {
+	public HindiTeacher() {//this is the default constructor
 		
 	}
-	//define a constructor for dependency injection
+	//define a constructor for dependency injection. this is a parameterized constructor
 	public HindiTeacher(ExamTip theExamTip) {
 	examTip=theExamTip;	
 	}
