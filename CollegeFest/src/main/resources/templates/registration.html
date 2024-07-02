@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+</head>
+<body>
+<div class="container mt-5">
+<div class="card">
+<div class="card-header">
+<h1 style="color:green;text-align:center;" th:text="'great learning college fest'"></h1>
+<hr>
+<h3 style="color:red;text-align:center;" th:text="'user registration'"></h3>
+</div>
+<div class="card-body">
+<div th:if="${param.success}">
+<div class="alert alert-info">
+you have successfully registered
+</div>
+</div>
+<div>
+<form th:action="@{/registration}" th:object="${user}" method="post">
+<div class="form-group">
+<label for="firstName">First Name:</label>
+<input type="text" class="form-control" name="title" th:field="*{firstName}" required autofocus="autofocus">
+</div>
+<div class="form-group">
+<label for="lastName">Last Name:</label>
+<input type="text" class="form-control" name="title" th:field="*{lastName}" required autofocus="autofocus">
+</div>
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" class="form-control" name="title" th:field="*{email}" required autofocus="autofocus">
+</div>
+<div class="form-group">
+<label for="password">Password:</label>
+<input type="password" class="form-control" name="title" th:field="*{password}" required autofocus="autofocus">
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-primary btn-lg">register</button>
+<span>already registered?<a th:href="@{/login}">login here</a></span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
