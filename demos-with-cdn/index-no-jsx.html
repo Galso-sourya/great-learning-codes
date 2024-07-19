@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-bold{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <!--<div id="message">
+            <h1>what is react</h1>
+            <p title="introduction"><span class="text-bold">React</span>is a js library</p>
+        </div>-->
+    </div>
+   <!--reactjs.org/docs/cdn-links.html
+   https://unpkg.com/react@18/umd/react.development.js
+   paste 2 scripts from there
+   1st script is for mobile application. the next one is specifically for web application--> 
+   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<!--we can copy path from the folder and paste in browser.
+this will be done in html. how to do same in react?-->
+<script>
+const el=React.createElement(
+    'div',//1st argument is what kind of html tag we want to create
+    {
+        id:'message'//next is prop declaration saying the attribute value
+    },//third one is the children elements of it 
+    React.createElement(
+        'h1',
+        null,//no prop
+        'what is react'
+    ),
+    React.createElement(
+        'p',
+        {
+            title:'introduction'
+        },
+    React.createElement(
+        'span',
+        {
+         className:'text-bold'   
+        },
+        'React'
+    ),
+    'is a library.....'
+    )
+);
+ReactDOM.render(el,document.getElementById('root'));
+//to run,same,copy path and.....
+//to simplyfy the above code, we use jsx
+</script>
+</body>
+</html>

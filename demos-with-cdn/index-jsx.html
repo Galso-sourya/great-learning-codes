@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-bold{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <!--<div id="message">
+            <h1>what is react</h1>
+            <p title="introduction"><span class="text-bold">React</span>is a js library</p>
+        </div>-->
+    </div>
+   <!--reactjs.org/docs/cdn-links.html
+   https://unpkg.com/react@18/umd/react.development.js
+   paste 2 scripts from there
+   1st script is for mobile application. the next one is specifically for web application--> 
+   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.24.10/babel.min.js"></script>
+<!--we can copy path from the folder and paste in browser.
+this will be done in html. how to do same in react?-->
+<script type="text/babel">
+    //paste the whole script in babel
+const el=(
+    <div id="message">
+            <h1>what is react</h1>
+            <p title="introduction"><span className="text-bold">React</span>is a js library</p>
+        </div> //but how can we use html in js? we have to go to babeljs.io
+);
+ReactDOM.render(el,document.getElementById('root'));
+//to run,same,copy path and.....
+//to simplyfy the above code, we use jsx
+//go to cdnjs.com and search for babel-standalone. copy the url and paste in script as above
+</script>
+</body>
+</html>
