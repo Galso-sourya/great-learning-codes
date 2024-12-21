@@ -1,0 +1,26 @@
+h2 {
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;/*this creates the gap between list items. like home, about.....*/
+}
+
+nav a {
+  text-decoration: none;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+}
