@@ -11,7 +11,8 @@ const products={
         {id:6,name:'f'}
     ]
 };
-const fetchProductsOfPage=(page:number)=>{//this accepts the page number and according to it,it shows the item
+const fetchProductsOfPage=(page:number)=>{//this accepts the page number and according to it,it shows the item.if page number exceeds 2
+    //it will throw an error. the reject statement of the promise
     if(page==1||page==2){
         return new Promise<Item[]>((resolve,reject)=>{
             setTimeout(()=>{
