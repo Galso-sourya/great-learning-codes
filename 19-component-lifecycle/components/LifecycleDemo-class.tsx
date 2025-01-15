@@ -10,6 +10,7 @@ error: Error| null//either error object or null
 }
 class LifecycleDemo extends Component<Props,State>{
     constructor(props:Props){
+        //console.log('constructor');
         super(props);
         this.state={//this is the initial point of the state
             page:1,
