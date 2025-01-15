@@ -11,7 +11,7 @@ const products={
         {id:6,name:'f'}
     ]
 };
-const fetchProductsOfPage=(page:number)=>{
+const fetchProductsOfPage=(page:number)=>{//this accepts the page number and according to it,it shows the item
     if(page==1||page==2){
         return new Promise<Item[]>((resolve,reject)=>{
             setTimeout(()=>{
