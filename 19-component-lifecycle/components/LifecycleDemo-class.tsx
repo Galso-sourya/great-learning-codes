@@ -6,7 +6,7 @@ type State={
 page:number,
 status: 'LOADING' | 'LOADED' | 'ERROR',
 products:Item[],
-error: Error| null
+error: Error| null//either error object or null
 }
 class LifecycleDemo extends Component<Props,State>{
     constructor(props:Props){
